@@ -9,7 +9,6 @@ Para trabajar con la base de datos usamos:
 - [Prisma](https://www.prisma.io) para trabajar con la base de datos.
 - [PostgreSQL](https://www.postgresql.org/) como gestor de base de datos.
 - [Docker](https://www.docker.com/) para alojar la base de datos PostgreSQL en un contenedor para desarrollo.
-- [Dotenv](https://github.com/motdotla/dotenv) para disponer de un fichero de variables de entorno útil para el desarrollo.
 
 Aunque la base de datos elegida es PostgreSQL, debería poder utilizarse cualquier otra base de datos soportada por Prisma pues no se han utilizado tipos de datos o características específicas de PostgreSQL.
 
@@ -57,7 +56,6 @@ To work with the database we use:
 - [Prisma](https://www.prisma.io) to work with the database.
 - [PostgreSQL](https://www.postgresql.org/) as a database manager.
 - [Docker](https://www.docker.com/) to host the PostgreSQL database in a container for development.
-- [Dotenv](https://github.com/motdotla/dotenv) to have a file of environment variables useful for development.
 
 Although the chosen database is PostgreSQL, any other database supported by Prisma should be able to be used as no PostgreSQL-specific data types or features have been used.
 
