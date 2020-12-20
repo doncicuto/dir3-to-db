@@ -1,0 +1,3 @@
+[submodule "prisma"]
+	path = prisma
+	url = https://github.com/doncicuto/dir3-prisma-scheme
