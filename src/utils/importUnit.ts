@@ -7,7 +7,9 @@ export const importUnit = async (unit: commonDIR3Unit, create: Function) => {
       description: unit.C_DNM_UD_ORGANICA,
       level: unit.C_ID_NIVEL_ADMON,
       type: unit.C_ID_TIPO_ENT_PUBLICA,
-      hierarchicalLevel: unit.N_NIVEL_JERARQUICO
+      hierarchicalLevel: unit.C_ID_AMB_PROVINCIA
+        ? unit.C_DESC_PROV
+        : unit.N_NIVEL_JERARQUICO
         ? unit.N_NIVEL_JERARQUICO
         : null,
       hierarchicalSuperiorUnitId: unit.C_ID_DEP_UD_SUPERIOR,
@@ -22,10 +24,12 @@ export const importUnit = async (unit: commonDIR3Unit, create: Function) => {
       officialCreationDate: unit.D_VIG_ALTA_OFICIAL
         ? new Date(unit.D_VIG_ALTA_OFICIAL)
         : null,
-      provinceDesc: unit.hasOwnProperty("C_ID_AMB_PROVINCIA")
-        ? unit.C_ID_AMB_PROVINCIA
+      provinceDesc: unit.C_ID_AMB_PROVINCIA ? unit.C_ID_AMB_PROVINCIA : null,
+      provinceId: unit.C_ID_AMB_PROVINCIA
+        ? unit.N_NIVEL_JERARQUICO
+          ? unit.N_NIVEL_JERARQUICO
+          : null
         : null,
-      provinceId: unit.hasOwnProperty("C_DESC_PROV") ? unit.C_DESC_PROV : null,
       nifOrCif: unit.NIF_CIF,
     },
   });

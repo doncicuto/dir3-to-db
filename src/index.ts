@@ -53,7 +53,6 @@ const main = async () => {
       showErrorMessage(error);
     }
   }
-  console.log("ddd");
   await prisma.$disconnect();
 };
 
