@@ -1,0 +1,143 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model OrganicUnitAGE {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
+
+model OrganicUnitCCAA {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
+
+model OrganicUnitUniversity {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
+
+model OrganicUnitInstitution {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
+
+model OrganicUnitLocalEntity {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
+
+model OrganicUnitJustice {
+  id                                      String    @id
+  description                             String
+  level                                   Int
+  type                                    String
+  provinceDesc                            String?
+  provinceId                              Int?
+  hierarchicalLevel                       Int?
+  hierarchicalSuperiorUnitId              String
+  hierarchicalSuperiorUnitDescription     String
+  rootOrganicUnitId                       String
+  rootOrganicUnitDescription              String
+  publicLawEntityIndicator                String
+  rootPublicLawEntityIndicatorId          String
+  rootPublicLawEntityIndicatorDescription String
+  status                                  String
+  officialCreationDate                    DateTime?
+  nifOrCif                                String
+
+  @@index([description, hierarchicalSuperiorUnitDescription])
+}
