@@ -3,14 +3,10 @@ type: docker
 name: json-to-db
 
 clone:
-  disable: true
+  default:
+    recursive: true          
 
 steps:
-- name: clone
-  image: plugins/git
-  commands:
-  - git clone https://github.com/doncicuto/dir3-to-db.git .
-  - git submodule update
 - name: import-to-db
   image: node:lts
   volumes:
