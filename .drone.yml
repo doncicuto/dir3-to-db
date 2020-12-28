@@ -6,6 +6,7 @@ steps:
 - name: submodules
   image: alpine/git
   commands:
+  - git submodule init
   - git submodule update
 - name: import-to-db
   image: node:lts
@@ -18,10 +19,7 @@ steps:
     POSTGRES_PASSWORD:
       from_secret: postgres_password
   commands:
-  - git submodule update
-  - ls -al prisma/
-  - ls -al src/
-  - ls -al src/utils/
+  - ls -l prisma/
   - yarn
   - yarn start
 
