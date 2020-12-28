@@ -2,11 +2,15 @@ kind: pipeline
 type: docker
 name: json-to-db
 
+clone:
+  disable: true
+
 steps:
-- name: submodules
-  image: alpine/git
+- name: clone
+  image: plugins/git
   commands:
-  - git submodule update --recursive --remote
+  - git clone https://github.com/doncicuto/dir3-to-db.git .
+  - git submodule update
 - name: import-to-db
   image: node:lts
   volumes:
