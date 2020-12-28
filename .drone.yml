@@ -1,0 +1,27 @@
+kind: pipeline
+type: docker
+name: json-to-db
+
+steps:
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule update --recursive --remote
+- name: import-to-db
+  image: node:lts
+  volumes:
+  - name: input
+    path: /drone/src/utils/filesToImport
+  environment:
+    POSTGRES_USER:
+      from_secret: postgres_user
+    POSTGRES_PASSWORD:
+      from_secret: postgres_password
+  commands:
+  - yarn
+  - yarn start
+
+volumes:
+- name: input
+  host:
+    path: /tmp/dir3-json
