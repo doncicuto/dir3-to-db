@@ -14,10 +14,8 @@ steps:
   - name: input
     path: /drone/src/src/utils/filesToImport
   environment:
-    POSTGRES_USER:
-      from_secret: postgres_user
-    POSTGRES_PASSWORD:
-      from_secret: postgres_password
+    DATABASE_URL:
+      from_secret: database_url
   commands:
   - ls -l prisma/
   - yarn
