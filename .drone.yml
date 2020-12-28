@@ -17,7 +17,6 @@ steps:
     DATABASE_URL:
       from_secret: database_url
   commands:
-  - ls -l prisma/
   - yarn
   - yarn start
 
