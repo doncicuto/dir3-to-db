@@ -2,11 +2,11 @@ kind: pipeline
 type: docker
 name: json-to-db
 
-clone:
-  image: plugins/git
-  recursive: true          
-
 steps:
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule update
 - name: import-to-db
   image: node:lts
   volumes:
