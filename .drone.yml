@@ -18,7 +18,9 @@ steps:
     POSTGRES_PASSWORD:
       from_secret: postgres_password
   commands:
-  - ls -al
+  - ls -al prisma/
+  - ls -al src/
+  - ls -al utils/
   - yarn
   - yarn start
 
