@@ -11,16 +11,17 @@ steps:
   image: node:lts
   volumes:
   - name: input
-    path: /drone/src/utils/filesToImport
+    path: /drone/src/src/utils/filesToImport
   environment:
     POSTGRES_USER:
       from_secret: postgres_user
     POSTGRES_PASSWORD:
       from_secret: postgres_password
   commands:
+  - git submodule update
   - ls -al prisma/
   - ls -al src/
-  - ls -al utils/
+  - ls -al src/utils/
   - yarn
   - yarn start
 
