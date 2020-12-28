@@ -3,8 +3,8 @@ type: docker
 name: json-to-db
 
 clone:
-  default:
-    recursive: true          
+  image: plugins/git
+  recursive: true          
 
 steps:
 - name: import-to-db
