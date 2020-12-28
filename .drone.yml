@@ -18,6 +18,7 @@ steps:
     POSTGRES_PASSWORD:
       from_secret: postgres_password
   commands:
+  - ls -al
   - yarn
   - yarn start
 
