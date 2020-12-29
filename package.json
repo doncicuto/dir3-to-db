@@ -5,7 +5,7 @@
   "author": "Miguel Cabrerizo",
   "license": "MIT",
   "scripts": {
-    "start": "npx prisma generate && npx ts-node src/index.ts"
+    "start": "yarn prisma generate && yarn prisma db push --preview-feature && yarn ts-node src/index.ts"
   },
   "dependencies": {
     "@prisma/cli": "^2.13.1",
