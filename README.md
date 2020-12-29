@@ -39,8 +39,6 @@ En el subdirectorio src/utils se deberán ubicar los ficheros JSON a importar.
 
 > NOTA: Si se va a utilizar el contenedor Docker, debe crearse primero con `docker-compose up -d`. Si no dispone de docker-compose visite [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
-> IMPORTANTE: Antes de poder realizar la importación, será necesario ejecutar una vez el siguiente comando para que Prisma cree la base de datos, las tablas basándose en los modelos y genere el cliente Prisma: `yarn prisma db push --preview-feature` o `npx prisma db push --preview-feature`
-
 > IMPORTANTE: Asegúrese de crear la variable de entorno DATABASE_URL con el URI de conexión a la base de datos o crear un fichero .env con la definición de dicha variable como se definía más arriba.
 
 Para lanzar la importación ejecute `yarn start` o `npm start`.
@@ -93,8 +91,6 @@ The database is called dir3 and has a table for each JSON file to import:
 The JSON files to import should be located in the src / utils subdirectory.
 
 > NOTE: If the Docker container is to be used, it must first be created with `docker-compose up -d`. If you do not have docker-compose visit [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
-
-> IMPORTANT: Before being able to import, it will be necessary to execute the following command once for Prisma to create the database, the tables based on the models and generate the Prisma client: `yarn prisma db push --preview-feature` or `npx prisma db push --preview-feature`
 
 > IMPORTANT: Make sure to create the environment variable DATABASE_URL with the URI of connection to the database or create a .env file with the definition of said variable as defined above.
 
